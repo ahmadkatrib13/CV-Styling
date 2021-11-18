@@ -1,0 +1,236 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: gray;
+    padding: 40px 10vw;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+hgroup {
+    color: rgb(216, 8, 8);
+}
+
+header figure {
+    margin-left: 0;
+    padding-left: 3vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8vw;
+    background-color: white;
+}
+
+h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid gray;
+}
+
+h3::before {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: "";
+    border-radius: 50%;
+    background-color: red;
+}
+
+.experience h4 {
+    color: red;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.experience-type {
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.experience-institution::before {
+    content: "@ ";
+}
+
+.experience-details {
+    margin: 5px 10px;
+    opacity: 0.5;
+}
+
+.experience-location::before {
+    content: "In ";
+}
+
+.experience-date::before {
+    content: "on";
+}
+
+.experience-date-separator {
+    color: red;
+}
+.contact {
+    margin: 0;
+    display: grid;
+    grid-template-columns: max-content auto;
+    background-color: white;
+}
+
+.contact-type {
+    background-color: red;
+    color: white;
+    width: 125px;
+    padding: 3px 0 3px 5px;
+}
+
+.contact-value {
+    margin: 0;
+    padding: 3px 0 3px 8px;
+}
+
+.contact-value,
+.contact-value a {
+    color: red;
+    text-decoration: none;
+}
+
+.contact-skype .contact-value {
+    color: black;
+}
+
+.skills-primary,
+.skills-secondary {
+    margin-bottom: 15px;
+}
+
+.skills-primary::before {
+    content: 'Main';
+    padding: 4px 0;
+}
+
+.skills-secondary::before {
+    content: 'Other';
+}
+
+.skill {
+    color: white;
+    padding: 5px;
+    background-color: #cccccc;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+.skills-secondary .skill {
+    opacity: 0.5;
+}
+
+.skill span {
+    display: block;
+    background-color: red;
+    padding: 8px
+}
+
+.skill[data-skill='1'] span {
+    width: 10%;
+}
+
+.skill[data-skill='2'] span {
+    width: 20%;
+}
+
+.skill[data-skill='3'] span {
+    width: 30%;
+}
+
+.skill[data-skill='4'] span {
+    width: 40%;
+}
+
+.skill[data-skill='5'] span {
+    width: 50%;
+}
+
+.skill[data-skill='6'] span {
+    width: 60%;
+}
+
+.skill[data-skill='7'] span {
+    width: 70%;
+}
+
+.skill[data-skill='8'] span {
+    width: 80%;
+}
+
+.skill[data-skill='9'] span {
+    width: 90%;
+}
+
+.skill[data-skill='10'] span {
+    width: 100%;
+}
+
+@media only screen and (min-width:1024px) {
+    header {
+        padding: 0 10vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header div {
+        flex-direction: row;
+        padding-left: 1vw;
+        align-items: flex-end;
+    }
+    hgroup {
+        padding-bottom: 8px;
+    }
+    .content {
+        display: grid;
+        grid-template-areas: "header contact" "about competencies" "experiences education" "hobbies .";
+        padding: 0 10vw;
+    }
+    #about {
+        grid-area: about;
+    }
+    #competencies {
+        grid-area: competencies;
+    }
+    #experiences {
+        grid-area: experiences;
+    }
+    #education {
+        grid-area: education;
+    }
+    #hobbies {
+        grid-area: hobbies
+    }
+    #contact {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        width: 50%; 
+    }
+    section p {
+        padding-right: 20px;
+    }
+    #contact h3 {
+        display: none;
+    }
+    .contact {
+        background-color: black;
+    }
+    .contact-skype .contact-value {
+        visibility: hidden;
+    }
+}
