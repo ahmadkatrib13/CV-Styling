@@ -13,7 +13,10 @@ header div {
     flex-direction: column;
     flex-wrap: wrap;
 }
-
+header img{
+    width: 110px;
+    height: auto;
+}
 hgroup {
     color: rgb(216, 8, 8);
 }
@@ -198,6 +201,7 @@ h3::before {
     .content {
         display: grid;
         grid-template-areas: "header contact" "about competencies" "experiences education" "hobbies .";
+        grid-template-columns: 1fr 1fr;
         padding: 0 10vw;
     }
     #about {
